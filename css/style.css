@@ -1,0 +1,566 @@
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('../fonts/Roboto-Light.otf');
+}
+
+html,body,section,header,
+footer,h1,h2,h3,h4,h5,h6,p,
+img,ol,ul,li,fieldset,form, div {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  font-family: 'Roboto-light', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/*---------------- CLEARFIX hack --------------------*/
+
+.clearfix:after, .form-row:after, .col:after, .wrapper:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*---------------- CLEARFIX hack end ----------------*/
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+
+/*---------------- Header ----------------*/
+
+header.container {
+  background: url('../img/bg.png') no-repeat center center;
+}
+
+header .wrapper {
+  position: relative;
+  min-height: 180px;
+}
+
+.languages {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.language {
+  display: inline-block;
+  padding: 5px 2px;
+}
+
+.language img{
+  width: 30px;
+}
+
+.language:hover {
+  opacity: .7;
+}
+
+header .wrapper .slogan {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  position: absolute;
+  top: 30%;
+  left: 150px;
+  margin: 30px 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #3E2723;
+}
+
+header .wrapper .logo{
+  display: block;
+  position: absolute;
+  width: 128px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.logo:hover {
+  opacity: .8;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/*----------------
+ Header end
+ ----------------*/
+
+
+/*----------------
+ Main 
+ ----------------*/
+
+.col.one-of-three {
+  width: 33.3%;
+  float: left;
+}
+
+.col.two-of-three {
+  width: 66.6%;
+  margin-left: 0.1%;
+  float: left;
+}
+
+.form-decoration {
+  margin-top: 20px;
+}
+
+.form-row {
+  float: left;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.form-row h4{
+  font-family: Roboto-light, sans-serif;
+  font-size: 1.3rem;
+  color: #4E342E;
+  float: left;
+}
+
+.form-row output{
+  font-family: Roboto-light, sans-serif;
+  font-size: 1.3rem;
+  float: right;
+  margin-right: 20px;
+  color: #757575;
+}
+
+/*---------------- tree range ----------------*/
+input[type=range] {
+  display: none;
+}
+
+.range {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: inset 0 0 5px#888;
+  box-shadow: inner 0 0 5px #888;
+  margin-top: 8px;
+}
+
+.range-fill {
+  width: 100%;
+  height: 10px;
+  background: #FDD835;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 2;
+  position: relative;
+  -webkit-box-shadow: inset 0 0 5px #BF360C;
+  box-shadow: inner 0 0 5px #BF360C;
+}
+
+.range-handle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #eee;
+  border: 1px solid #ccc;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0 0 5px #888;
+  box-shadow: 0 0 5px #888;
+}
+
+.range-handle:active {
+  background: #E0E0E0;
+}
+
+.range-height .range-handle {
+ left: 30%;
+}
+
+.range-diameter .range-handle {
+  left: 50%;
+}
+
+.range-height .range-fill {
+  width: 32%;
+}
+
+.range-diameter .range-fill {
+  width: 52%;
+}
+
+/*---------------- tree variety ----------------*/
+.tree-variety {
+  width: 100%;
+  padding: 10px;
+  font-family: Roboto-light, sans-serif;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: #4E342E;
+  border: 1px solid #FDD835;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*---------------- tree lights ----------------*/
+.tree-lights input[type="radio"] {
+  display: none;
+}
+
+.tree-lights {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tree-lights label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 1px solid #FDD835;
+  border-left: none;
+  display: block;
+  height: auto;
+  position: relative;
+  text-align: center;
+  padding: 5px 0;
+  font-family: Roboto, sans-serif;
+  color: #FFAB00;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.tree-lights label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left: 1px solid #FDD835;
+}
+
+.tree-lights label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.tree-lights input[type=radio]:checked + label {
+  background: #FDD835;
+  color: #4E342E;
+}
+
+/*---------------- tree bark ----------------*/
+.tree-bark label {
+  font-family: Roboto-light, sans-serif;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: #4E342E;
+  cursor: pointer;
+}
+
+/*---------------- tree top ----------------*/
+.tree-top input[type="radio"] {
+  display: none;
+}
+
+.tree-top {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tree-top label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 1px solid #FDD835;
+  border-left: none;
+  display: block;
+  height: auto;
+  min-height: 110px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tree-top label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left: 1px solid #FDD835;
+}
+
+.tree-top label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.tree-top label img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70px;
+  -webkit-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.tree-top label:hover img {
+  width: 90px;
+}
+
+.tree-top input[type=radio]:checked + label {
+  background: #FDD835;
+}
+
+/*---------------- tree decorations ----------------*/
+.tree-decorations input[type="radio"] {
+  display: none;
+}
+
+.tree-decorations {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tree-decorations label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 1px solid #FDD835;
+  border-left: none;
+  display: block;
+  height: auto;
+  min-height: 165px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tree-decorations label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left: 1px solid #FDD835;
+}
+
+.tree-decorations label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.tree-decorations label img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120px;
+  -webkit-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.tree-decorations label:hover img {
+  width: 140px;
+}
+
+.tree-decorations input[type=radio]:checked + label {
+  background: #FDD835;
+}
+
+.btn-primary {
+  background: #FDD835;
+  color: #4E342E;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 15px 40px;
+  display: block;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background: #FBC02D;
+}
+/*----------------
+ Main end
+ ----------------*/
+
+/*----------------
+ Footer 
+ ----------------*/
+.btn-like {
+  background: #4267b2;
+  color: #fff;
+  padding: 0px 4px 0px 22px;
+  position: relative;
+  font-size: 0.7rem;
+  text-decoration: none;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 14px 0;
+  float: left;
+}
+
+.btn-like:before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  background: url(../img/like.png);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 4px;
+}
+
+.btn-like:hover {
+  background: #35538f;
+}
+
+footer .footer-links {
+  margin: 14px 0;
+  float: right;
+  padding-right: 38px;
+}
+
+.footer-link {
+  text-decoration: none;
+  float: left;
+  position: relative;
+  margin-left: 14px;
+  font-size: 0.7rem;
+  color: #ccc;
+  font-family: Roboto-light, sans-serif;
+}
+
+.footer-link:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #ccc;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -8px;
+}
+
+.footer-links a:last-of-type:after {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 32px;
+  border-radius: 50%;
+  background: url(../img/mrnerd.png);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -35px;
+} 
+
+.footer-link:hover {
+  color: #9E9E9E;
+}
+/*----------------
+ Footer end
+ ----------------*/
+
+ /*----------------
+ Responsive
+ ----------------*/
+
+@media (max-width: 996px) {
+  .wrapper {
+    width: 94%;
+  }
+}
+
+@media (max-width: 670px) {
+  .col.one-of-three, .col.two-of-three {
+    width: 100%;
+  }
+
+  .form-row h4 {
+    margin-bottom: 10px;
+  }
+
+  header .wrapper .slogan {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  header .wrapper .slogan {
+    font-size: 1.8rem;
+  }
+}
