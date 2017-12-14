@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Social Sweethearts Task</title>
+	<meta name="title" content="Social Sweethearts Task">
+	<meta name="description" content="Social Sweethearts Task">
+	<meta name="author" content="Bozhana Ivanova">
+
+	<!-- Include HTML shiv/shim -->
+	<!--[if IE]>
+		<script src="js/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Reset/normalize CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Favicon -->
+	<link rel="favicon" href="img/favicon.png">
+
+	<!-- lastest minified jquery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<header class="container">
+		<div class="wrapper">
+				<a href="#" class="logo">
+					<img src="img/logo_tree.png" alt="">
+				</a>
+				<h1 class="slogan">Do you want to decorate your Christmas tree?</h1>
+				<div class="languages">
+					<a href="#" class="language">
+						<img src="img/flags/flag-de.png" alt="">
+					</a>
+					<a href="#" class="language">
+						<img src="img/flags/flag-en.png" alt="">
+					</a>
+					<a href="#" class="language">
+						<img src="img/flags/flag-es.png" alt="">
+					</a>
+				</div>	
+		</div>
+	</header>
+	<div class="wrapper">
+		<form action="result" name="decoration" method="post" class="form-decoration">
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Height</h4>
+					<output class="output-height">150</output>
+				</div>
+				<div class="col two-of-three">
+					<input type="range" name="height" min="50" max="220">
+					<div class="range range-height">
+						<div class="range-fill"></div>
+						<div class="range-handle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Diameter</h4>
+					<output class="output-diameter">75</output>
+				</div>
+				<div class="col two-of-three">
+					<input type="range" id="diameter" name="diameter" min="40" max="150">
+					<div class="range range-diameter">
+						<div class="range-fill"></div>
+						<div class="range-handle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4><label for="variety">Variety</label></h4>
+				</div>
+				<div class="col two-of-three">
+					<select class="tree-variety" name="variety" id="variety">
+						<option value="pine">pine</option>
+						<option value="cedar">cedar</option>
+						<option value="fir">fir</option>
+						<option value="spruce">spruce</option>
+						<option value="cypress">cypress</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Christmas lights</h4>
+				</div>
+				<div class="col two-of-three">
+					<div class="tree-lights">
+						<input type="radio" name="lights" id="lights-short" checked="checked" value="lights-short">
+						<label for="lights-short">short</label>
+						<input type="radio" name="lights" id="lights-middle" value="lights-middle">
+						<label for="lights-middle">middle</label>
+						<input type="radio" name="lights" id="lights-long" value="lights-long">
+						<label for="lights-long">long</label>
+						<input type="radio" name="lights" id="lights-extra" value="lights-extra">
+						<label for="lights-extra">extra long</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Bark color</h4>
+				</div>
+				<div class="col two-of-three">
+					<div class="tree-bark">
+						<input type="radio" name="bark" id="color-dark-gray" checked="checked" value="color-dark-gray">
+						<label for="color-dark-gray">dark gray</label>
+						<input type="radio" name="bark" id="color-gray" value="color-gray">
+						<label for="color-gray">gray</label>
+						<input type="radio" name="bark" id="color-light-gray" value="color-light-gray">
+						<label for="color-light-gray">light gray</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Tree top</h4>
+				</div>
+				<div class="col two-of-three">
+					<div class="tree-top">
+						<input type="radio" id="top-star" name="top"  checked="checked" value="top-star">
+						<label for="top-star">
+							<img src="img/tree_top_star.png" alt="">
+						</label>
+						<input type="radio" id="top-ribbon" name="top" value="top-ribbon">
+						<label for="top-ribbon">
+							<img src="img/tree_top_ribbon.png" alt="">
+						</label>
+						<input type="radio" id="top-toy" name="top" value="top-toy">
+						<label for="top-toy">
+							<img src="img/tree_top_toy.png" alt="">
+						</label>
+						<input type="radio" id="top-long" name="top" value="top-long">
+						<label for="top-long">
+							<img src="img/tree_top_long.png" alt="">
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="col one-of-three">
+					<h4>Decorations</h4>
+				</div>
+				<div class="col two-of-three">
+					<div class="tree-decorations">
+						<input type="radio" id="toys-none" name="toys"  checked="checked" value="toys-none">
+						<label for="toys-none">
+							<img src="img/tree_base_none.png" alt="">
+						</label>
+						<input type="radio" id="toys-half" name="toys" value="toys-half">
+						<label for="toys-half">
+							<img src="img/tree_base_half.png" alt="">
+						</label>
+						<input type="radio" id="toys-done"  name="toys" value="toys-done">
+						<label for="toys-done">
+							<img src="img/tree_base_done.png" alt="">
+						</label>
+					</div>
+				</div>
+
+			</div>
+			<div class="form-row">
+				<button type="submit" class="btn-primary">Result</button>
+			</div>
+		</form>
+	</div>
+	<footer class="wrapper">
+		<a href="#" class="btn-like"><span class="txt-bold">Like</span> 5.444</a>
+		<div class="footer-links clearfix">
+			<a href="http://kamelrechner.de/de/privacy" class="footer-link" target="_blank"> Terms &amp; Conditions</a>
+			<a href="http://kamelrechner.de/de/imprint" class="footer-link" target="_blank">Impressum</a>
+			<a href="https://www.facebook.com/NerdMeet" class="footer-link" target="_blank">Mr. Nerd</a>
+		</div>
+	</footer>
+	
+</body>
+</html>
